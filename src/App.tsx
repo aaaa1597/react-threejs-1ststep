@@ -30,6 +30,17 @@ const App = () => {
       const material = new THREE.MeshNormalMaterial();
       const box = new THREE.Mesh(geometry, material);
       scene.add(box);
+
+      const tick = () => {
+        box.rotation.y += 0.01
+        box.rotation.z += 0.01
+        renderer.render(scene, camera)
+        requestAnimationFrame(tick);
+      }
+
+      /* 初回起動 */
+      tick()
+
     }, [])
 
   return (
