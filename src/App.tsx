@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './App.css';
 import * as THREE from 'three';
-import { render } from '@testing-library/react';
 
 // サイズを指定
 const DISPLAY_WIDTH  = 960;
@@ -11,17 +10,17 @@ const App = () => {
   const canvasRef   = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-        //レンダラーを作成
-        const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer({
-          canvas: canvasRef.current??undefined,
+      //レンダラーを作成
+      const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer({
+        canvas: canvasRef.current??undefined,
       });
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(DISPLAY_WIDTH, DISPLAY_HEIGHT);
 
-      // シーンを作成
+      // シーン作成
       const scene = new THREE.Scene();
 
-      // カメラを作成
+      // カメラ作成
       const camera = new THREE.PerspectiveCamera(45, DISPLAY_WIDTH / DISPLAY_HEIGHT);
       camera.position.set(0, 0, +1000);
 

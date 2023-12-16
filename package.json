@@ -42,7 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "React+TypeScriptのプロジェクト雛形です。",
+  "description": "React+TypeScriptなWebアプリでThree.jsの最初の一歩。",
   "main": "index.js",
   "devDependencies": {
     "eslint-config-prettier": "^9.1.0",
